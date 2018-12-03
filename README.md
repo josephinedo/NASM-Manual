@@ -1,4 +1,4 @@
-#NASM Introduction Manual for mac
+# NASM Introduction Manual for mac
 A simple introduction into the nasm land for mac users
 
 ### Objective
@@ -14,5 +14,5 @@ The purpose of this manual is to present an easy way to start programming in ass
 ## Built With
 * [Latex](https://www.latex-project.org/)
 
-##Auhor 
+## Auhor 
 * **Abrahan Pinedo** - [josephinedo](https://github.com/josephinedo)
