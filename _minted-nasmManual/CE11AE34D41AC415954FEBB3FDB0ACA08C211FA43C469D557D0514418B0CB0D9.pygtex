@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+nasm \PYGZhy{}fmacho64 helloFriend.asm \PYGZhy{}l helloFriend.lst
+\end{Verbatim}

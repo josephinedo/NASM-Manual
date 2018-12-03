@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{; Asking for name. Write and Read from console using the C library. }
+\PYG{c+c1}{; To assemble and run:}
+\PYG{c+c1}{; 	nasm \PYGZhy{}fmacho64 writeRead.asm \PYGZam{}\PYGZam{} gcc writeRead.o \PYGZam{}\PYGZam{} ./a.out}
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+		\PYG{k}{SECTION}		\PYG{n+nv}{.data}
+\PYG{n+nl}{n\PYGZus{}in:}	\PYG{k+kd}{db}			\PYG{l+s}{\PYGZsq{}What is your first name? \PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{0}
+\PYG{n+nl}{n\PYGZus{}out:}	\PYG{k+kd}{db}			\PYG{l+s}{\PYGZsq{}Your name is \PYGZpc{}s\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{0}
+\PYG{n+nl}{f\PYGZus{}str:}	\PYG{k+kd}{db}			\PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,}\PYG{l+m+mi}{0}
+
+		\PYG{k}{SECTION}		\PYG{n+nv}{.bss}
+\PYG{n+nl}{NAME:}	\PYG{k+kd}{resb}		\PYG{l+m+mi}{1}
+
+		\PYG{k}{SECTION}		\PYG{n+nv}{.text}
+		\PYG{k}{global}		\PYG{n+nv}{\PYGZus{}main}
+		\PYG{k}{extern}		\PYG{n+nv}{\PYGZus{}printf}
+		\PYG{k}{extern}		\PYG{n+nv}{\PYGZus{}scanf}
+		\PYG{n+nf}{default}		\PYG{n+nv}{rel}
+		
+\PYG{n+nl}{\PYGZus{}main:}	
+		\PYG{n+nf}{push}		\PYG{n+nb}{rbp}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rbp}\PYG{p}{,} \PYG{n+nb}{rsp} \PYG{c+c1}{; int main () \PYGZob{}}
+
+		\PYG{n+nf}{lea} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{n\PYGZus{}in}\PYG{p}{]} \PYG{c+c1}{; printf(\PYGZdq{}What is your name?\PYGZdq{});}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{0}
+		\PYG{n+nf}{call}		\PYG{n+nv}{\PYGZus{}printf}
+
+        \PYG{n+nf}{lea} 		\PYG{n+nb}{rsi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{NAME}\PYG{p}{]} \PYG{c+c1}{; scanf(\PYGZdq{}\PYGZpc{}s\PYGZdq{}, \PYGZam{}NAME);}
+        \PYG{n+nf}{lea} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{f\PYGZus{}str}\PYG{p}{]}
+        \PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{0}
+        \PYG{n+nf}{call} 		\PYG{n+nv}{\PYGZus{}scanf}
+
+        \PYG{n+nf}{lea} 		\PYG{n+nb}{rsi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{NAME}\PYG{p}{]} \PYG{c+c1}{; printf(\PYGZdq{}Your name is \PYGZpc{}s\PYGZbs{}n\PYGZdq{}, NAME);}
+		\PYG{n+nf}{lea} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{n\PYGZus{}out}\PYG{p}{]} 
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{1}
+		\PYG{n+nf}{call}		\PYG{n+nv}{\PYGZus{}printf}
+
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{0} 
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rsp}\PYG{p}{,} \PYG{n+nb}{rbp}
+		\PYG{n+nf}{pop} 		\PYG{n+nb}{rbp}
+		\PYG{n+nf}{ret} 					\PYG{c+c1}{; return 0 \PYGZcb{};}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{global}	 \PYG{n+nv}{\PYGZus{}main}
+\PYG{k}{extern}	 \PYG{n+nv}{\PYGZus{}printf}
+\PYG{k}{extern}	 \PYG{n+nv}{\PYGZus{}scanf}
+\end{Verbatim}

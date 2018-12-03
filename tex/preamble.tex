@@ -1,0 +1,110 @@
+\documentclass[letterpaper,11 pt]{report}
+
+%***************************************** ENCODING ********************************************
+\usepackage[utf8]{inputenc} % UTF-8 -input- enconding, useful to put á instead of \'a
+\usepackage[T1]{fontenc} % T1 -font- encoding, with this PDF viewer can look for my special words
+%\usepackage[spanish,mexico]{babel} % My language in the text
+
+%***************************************** GEOMETRY ********************************************
+\usepackage[pass]{geometry}
+%\linespread{1.3} To make line spacing
+\usepackage{comment}
+\usepackage{enumitem} % Remove indent from itemize and list environment
+
+%***************************************** MATH ************************************************
+\usepackage{amsmath} 
+\usepackage{amsfonts}	% AMS packages
+\usepackage{amssymb}
+\numberwithin{equation}{chapter} % To put equation number in a different way 
+\usepackage[alsoload=synchem]{siunitx} % For units and degree symbol with \ang{ }
+
+%***************************************** TOC  *************************************************
+\usepackage[nottoc]{tocbibind} 		% Put figures, tables, bibliography and index in TOC
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3} % This define the deep of the chapter-section-subsection-etc in TOC
+
+%***************************************** COLOR  ***********************************************
+\usepackage[usenames,dvipsnames,table,svgnames]{xcolor} 	% Use of color in different environments
+
+%***************************************** FIGURES  **********************************************
+\usepackage{graphicx} 	% eps figures using PDFLatex
+\usepackage{wrapfig}
+\usepackage{subcaption} % To multiple figures
+\usepackage{pdflscape} % To landscape figures
+\usepackage{rotating} % To rotate figures
+\graphicspath{{fig/}}
+
+%***************************************** TABLES  **********************************************
+\usepackage{tabularx} 		% To rezise the table to textwith
+\newcolumntype{C}{>{\centering\arraybackslash}X}	 % Definition needed to center the text in the tables
+
+%***************************************** CAPTION  *********************************************
+\usepackage{caption} % Put beautiful captions on tables and figures
+\captionsetup{font={small},labelfont=bf, labelsep=endash,format=plain,indention=.5cm,margin={1cm,1cm}}
+
+%***************************************** TITLESEC  *********************************************
+\usepackage{fix-cm} % To put arbirary font sizes, used on chapter style
+\usepackage{titlesec} % To change the style of chapters, sections, subsections, etc. See documentation of titlesec for more information.
+
+\titleformat{\chapter}[display]
+	{\bfseries\huge\scshape}
+	{\color{BrickRed}\fontsize{60}{80}\selectfont\thechapter}
+  	{2ex}{}[]
+\titlespacing{\chapter}{4pc}{*0}{*10}[0pc]
+
+\titleformat{\section}
+	{\bfseries\large\scshape}
+  	{\color{BrickRed}\thesection}{0.3 em}{}
+\titlespacing{\section}{-2pc}{*4}{*1}[0pc]
+
+\titleformat{\subsection}
+	{\bfseries\large\scshape}
+  	{\thesubsection}{0.3 em}{}
+\titlespacing{\subsection}{-2pc}{*4}{*1}[0pc]
+
+%***************************************** FANCYHDR ********************************************
+\usepackage{fancyhdr} % Used to change the style of the headers and footers
+\setlength{\headheight}{15 pt}
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{ \markboth{\MakeUppercase{#1}}{} }
+\renewcommand{\sectionmark}[1]{ \markright{\MakeUppercase{#1}}{} }
+\renewcommand{\headrulewidth}{0pt} % To remove the line in the header
+
+\lhead[{\Large\textbf{\thepage}}\hspace{1cm}\leftmark]{}
+\rhead[]{\rightmark\hspace{1cm}{\Large\textbf{\thepage}}}
+\fancyfoot[OC]{ } % I put this to erase the page numbers from the bottom
+\fancyheadoffset{2 cm}  % To make the header larger
+
+%***************************************** EMPTY PAGE ******************************************
+\makeatletter
+\let\ps@plain\ps@empty  % This redifine the pagestyle{plain} to pagestyle{empty}, that means no numberpage in the first page of chapters, TOC, etc
+\makeatother
+
+%***************************************** NOMENCLATURE **************************************
+%\usepackage{nomencl}
+%\makenomenclature
+%\renewcommand{\nomname}{Nomenclatura}
+
+%***************************************** CODE *************************************************
+\usepackage{listings} % This is to put source code (C, C++, Python, etc) in the PDF
+\usepackage{minted} % Other tool to put code in latex
+\setminted[nasm]{tabsize=4, style=autumn, bgcolor=FloralWhite, fontsize=\footnotesize}
+\setminted[c]{tabsize=4, style=autumn, bgcolor=AliceBlue, fontsize=\footnotesize}
+\usepackage{verbatim} % This is to put wherever it is in the TEX source code
+\renewcommand\listoflistingscaption{List of source codes}
+\renewcommand\listingscaption{Source Code}
+
+%***************************************** DATE *************************************************
+\usepackage{datetime} % This is to change \today format
+\newdateformat{mydate}{\monthname[\THEMONTH], \THEYEAR}
+
+%***************************************** BIBLIO ************************************************
+\bibliographystyle{unsrt} % Put some style in the bibliography
+
+%***************************************** INDEX ************************************************
+\usepackage{makeidx} % To make the index
+\makeindex
+
+%***************************************** LINKS ************************************************
+\usepackage[hidelinks]{hyperref} % To make some links in the PDF, this package should be at the end

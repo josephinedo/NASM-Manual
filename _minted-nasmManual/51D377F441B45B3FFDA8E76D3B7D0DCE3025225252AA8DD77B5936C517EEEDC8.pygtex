@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nf}{mov} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{1}            \PYG{c+c1}{; rax its going to be [result]}
+	\PYG{n+nf}{mov} \PYG{n+nb}{rbx}\PYG{p}{,} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{num}\PYG{p}{]}  \PYG{c+c1}{; Loads num in rbx}
+\PYG{n+nl}{while:}
+	\PYG{n+nf}{imul} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{n+nb}{rbx}
+	\PYG{n+nf}{dec} \PYG{n+nb}{rbx}
+	\PYG{n+nf}{cmp} \PYG{n+nb}{rbx}\PYG{p}{,} \PYG{l+m+mi}{1}            \PYG{c+c1}{; the comparison is made}
+	\PYG{n+nf}{jg} \PYG{n+nv}{while}              \PYG{c+c1}{; It it is true then jumps tu while}
+	\PYG{n+nf}{mov} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{result}\PYG{p}{],} \PYG{n+nb}{rax}
+	\PYG{n+nf}{mov} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{num}\PYG{p}{],} \PYG{n+nb}{rbx}
+\end{Verbatim}

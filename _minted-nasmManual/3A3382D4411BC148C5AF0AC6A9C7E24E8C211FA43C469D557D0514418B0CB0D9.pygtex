@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ nasm \PYGZhy{}f \PYGZlt{}format\PYGZgt{} \PYGZlt{}filename\PYGZgt{} \PYG{o}{[}\PYGZhy{}o \PYGZlt{}output\PYGZgt{}\PYG{o}{]} 
+\end{Verbatim}

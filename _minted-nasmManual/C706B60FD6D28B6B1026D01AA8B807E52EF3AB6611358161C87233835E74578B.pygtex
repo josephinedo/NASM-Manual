@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{result}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{k}{do} \PYG{p}{\PYGZob{}}
+	\PYG{n}{result} \PYG{o}{=} \PYG{n}{result} \PYG{o}{*} \PYG{n}{num}\PYG{p}{;}
+	\PYG{n}{num}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}} \PYG{k}{while} \PYG{p}{(}\PYG{n}{num} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+\end{Verbatim}

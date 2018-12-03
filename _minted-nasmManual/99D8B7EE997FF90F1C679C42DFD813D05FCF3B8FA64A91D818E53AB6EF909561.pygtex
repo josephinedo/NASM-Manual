@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{; 64\PYGZhy{}bit hello program, designed for OS X. To assemble and run:}
+\PYG{c+c1}{; 	nasm \PYGZhy{}fmacho64 helloFriend.asm \PYGZam{}\PYGZam{} gcc helloFriend.o \PYGZam{}\PYGZam{} ./a.out}
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+		\PYG{k}{SECTION}		\PYG{n+nv}{.data}
+\PYG{n+nl}{cad:}	\PYG{k+kd}{db}			\PYG{l+s}{\PYGZsq{}Hello Friend!\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+m+mi}{0} \PYG{c+c1}{;}
+
+		\PYG{k}{SECTION}		\PYG{n+nv}{.text}
+		\PYG{k}{global}		\PYG{n+nv}{\PYGZus{}main}
+		\PYG{k}{extern}		\PYG{n+nv}{\PYGZus{}printf}
+		\PYG{n+nf}{default}		\PYG{n+nv}{rel}
+		
+\PYG{n+nl}{\PYGZus{}main:}	
+		\PYG{n+nf}{push}		\PYG{n+nb}{rbp}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rbp}\PYG{p}{,} \PYG{n+nb}{rsp} \PYG{c+c1}{; Preparing the main function}
+		
+		\PYG{n+nf}{lea} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{cad}\PYG{p}{]} \PYG{c+c1}{; The string is on RDI}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{0}
+		\PYG{n+nf}{call}		\PYG{n+nv}{\PYGZus{}printf}
+
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{c+c1}{; Return 0}
+		\PYG{n+nf}{leave}
+		\PYG{n+nf}{ret}
+\end{Verbatim}

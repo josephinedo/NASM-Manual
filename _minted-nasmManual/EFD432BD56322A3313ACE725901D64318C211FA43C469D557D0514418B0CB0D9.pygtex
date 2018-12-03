@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+nasm \PYGZhy{}f macho64 helloFriend.asm \PYGZhy{}o hello
+\end{Verbatim}

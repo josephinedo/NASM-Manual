@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nf}{mov} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{a}\PYG{p}{]}    \PYG{c+c1}{; Loads \PYGZsq{}a\PYGZsq{} and \PYGZsq{}b\PYGZsq{} into registers rax and rbx}
+	\PYG{n+nf}{mov} \PYG{n+nb}{rbx}\PYG{p}{,} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{b}\PYG{p}{]}
+	\PYG{n+nf}{cmp} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{n+nb}{rbx}          \PYG{c+c1}{; The comparison is made}
+	\PYG{n+nf}{jg} \PYG{n+nv}{L1}                 \PYG{c+c1}{; If condition is true jumps to L1}
+	\PYG{n+nf}{jmp} \PYG{n+nv}{L2}                \PYG{c+c1}{; If condition is false jumps to L2}
+\PYG{n+nl}{L1:}
+    \PYG{n+nf}{mov} \PYG{k+kt}{byte} \PYG{p}{[}\PYG{n+nv}{maxA}\PYG{p}{],} \PYG{l+m+mi}{1}    \PYG{c+c1}{; Only executed if condition was true}
+    \PYG{n+nf}{mov} \PYG{k+kt}{byte} \PYG{p}{[}\PYG{n+nv}{maxB}\PYG{p}{],} \PYG{l+m+mi}{0}	
+\PYG{n+nl}{L2:}
+\end{Verbatim}

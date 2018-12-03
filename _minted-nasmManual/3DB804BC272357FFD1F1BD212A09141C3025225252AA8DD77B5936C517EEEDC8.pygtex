@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{push} \PYG{n+nb}{rax} 	   \PYG{c+c1}{; save rax on stack}
+\PYG{n+nf}{pop} \PYG{n+nb}{rax}         \PYG{c+c1}{; load the top of stack on rax}
+\PYG{n+nf}{call} \PYG{n+nv}{\PYGZus{}printf}    \PYG{c+c1}{; calls for printf subrutine}
+\PYG{n+nf}{inc} \PYG{n+nb}{rax}         \PYG{c+c1}{; rax=rax+1}
+\end{Verbatim}

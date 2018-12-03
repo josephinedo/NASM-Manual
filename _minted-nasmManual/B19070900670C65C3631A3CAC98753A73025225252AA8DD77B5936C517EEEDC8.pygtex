@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nf}{mov}    \PYG{n+nb}{edx}\PYG{p}{,} \PYG{n+nv}{len}	     \PYG{c+c1}{;message length}
+	\PYG{n+nf}{mov}    \PYG{n+nb}{ecx}\PYG{p}{,} \PYG{n+nv}{msg} 	    \PYG{c+c1}{;message to write}
+	\PYG{n+nf}{mov}    \PYG{n+nb}{ebx}\PYG{p}{,} \PYG{l+m+mi}{1}        \PYG{c+c1}{;file descriptor (stdout)}
+	\PYG{n+nf}{mov}    \PYG{n+nb}{eax}\PYG{p}{,} \PYG{l+m+mi}{4}        \PYG{c+c1}{;system call number (sys\PYGZus{}write)}
+	\PYG{n+nf}{int}    \PYG{l+m+mh}{0x80}          \PYG{c+c1}{;call kernel}
+\end{Verbatim}

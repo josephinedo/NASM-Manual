@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{mov} \PYG{n+nb}{rbp}\PYG{p}{,} \PYG{n+nb}{rsp}		\PYG{c+c1}{; Register direct mode, aligning the stack}
+\end{Verbatim}

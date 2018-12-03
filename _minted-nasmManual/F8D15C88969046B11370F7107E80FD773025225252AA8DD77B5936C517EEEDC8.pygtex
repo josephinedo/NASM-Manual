@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nl}{n\PYGZus{}in:} \PYG{k+kd}{db} \PYG{l+s}{\PYGZsq{}What is your first name? \PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{0} \PYG{c+c1}{;For name input}
+\PYG{n+nl}{n\PYGZus{}out:} \PYG{k+kd}{db} \PYG{l+s}{\PYGZsq{}Your name is \PYGZpc{}s\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{c+c1}{; For name output, 10 is for breakline}
+\PYG{n+nl}{f\PYGZus{}str:} \PYG{k+kd}{db} \PYG{l+s}{\PYGZdq{}\PYGZpc{}s\PYGZdq{}}\PYG{p}{,}\PYG{l+m+mi}{0} \PYG{c+c1}{;To store the name}
+\end{Verbatim}

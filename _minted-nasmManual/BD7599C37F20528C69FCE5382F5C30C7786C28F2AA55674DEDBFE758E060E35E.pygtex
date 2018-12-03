@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{; Greatest Common Divisor (gcd) subroutine. It takes two integers }
+\PYG{c+c1}{; and returns the gcd. int gcd(int a, int b)}
+\PYG{c+c1}{; To assemble:}
+\PYG{c+c1}{; 	nasm \PYGZhy{}fmacho64 gcd.asm}
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+		\PYG{k}{global} 		\PYG{n+nv}{\PYGZus{}gcd}
+
+		\PYG{k}{SECTION} 	\PYG{n+nv}{.text}
+\PYG{n+nl}{\PYGZus{}gcd:}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rbx}\PYG{p}{,} \PYG{n+nb}{rdi}		\PYG{c+c1}{; rbx = a}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{n+nb}{rsi}		\PYG{c+c1}{; rdi = b}
+		\PYG{n+nf}{test} 		\PYG{n+nb}{rbx}\PYG{p}{,} \PYG{n+nb}{rbx}		\PYG{c+c1}{; a == 0 ? }
+		\PYG{n+nf}{jne} 		\PYG{n+nv}{L1} 				\PYG{c+c1}{; if a != 0 jmp L1}
+		\PYG{n+nf}{test} 		\PYG{n+nb}{rsi}\PYG{p}{,} \PYG{n+nb}{rsi}		\PYG{c+c1}{; b == 0}
+		\PYG{n+nf}{jne} 		\PYG{n+nv}{L1} 				\PYG{c+c1}{; if b != 0 jmp L1}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{l+m+mi}{1}			\PYG{c+c1}{; a == b == 0 entonces b = 1}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{n+nb}{rdi}		\PYG{c+c1}{; Ready to return}
+		\PYG{n+nf}{ret}
+\PYG{n+nl}{L1:}
+		\PYG{n+nf}{test} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{n+nb}{rdi}		\PYG{c+c1}{; b == 0 ?}
+		\PYG{n+nf}{jne} 		\PYG{n+nv}{L2} 				\PYG{c+c1}{; if b != 0 jmp L2}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{n+nb}{rbx}		\PYG{c+c1}{; Ready to return}
+		\PYG{n+nf}{ret}
+\PYG{n+nl}{L2:}
+		\PYG{n+nf}{test} 		\PYG{n+nb}{rbx}\PYG{p}{,} \PYG{n+nb}{rbx}		\PYG{c+c1}{; a == 0 ?}
+		\PYG{n+nf}{je} 			\PYG{n+nv}{L5}
+\PYG{n+nl}{L3:}
+		\PYG{n+nf}{cmp} 		\PYG{n+nb}{rbx}\PYG{p}{,} \PYG{n+nb}{rdi}
+		\PYG{n+nf}{je} 			\PYG{n+nv}{L5}
+		\PYG{n+nf}{jae} 		\PYG{n+nv}{L4}
+		\PYG{n+nf}{sub} 		\PYG{n+nb}{rdi}\PYG{p}{,} \PYG{n+nb}{rbx}
+		\PYG{n+nf}{jmp} 		\PYG{n+nv}{L3}
+\PYG{n+nl}{L4:}
+		\PYG{n+nf}{sub} 		\PYG{n+nb}{rbx}\PYG{p}{,} \PYG{n+nb}{rdi}
+		\PYG{n+nf}{jmp} 		\PYG{n+nv}{L3}
+\PYG{n+nl}{L5:}
+		\PYG{n+nf}{mov} 		\PYG{n+nb}{rax}\PYG{p}{,} \PYG{n+nb}{rdi}		\PYG{c+c1}{; Ready to return}
+		\PYG{n+nf}{ret}
+\end{Verbatim}

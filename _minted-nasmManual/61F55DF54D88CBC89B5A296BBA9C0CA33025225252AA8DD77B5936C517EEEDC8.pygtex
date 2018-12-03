@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nl}{subrutine:}
+	\PYG{c+c1}{; Save on the stack}
+	\PYG{c+c1}{; the modified registers inside of the routine}
+	\PYG{c+c1}{;}
+	\PYG{c+c1}{; Routine instructions}
+	\PYG{c+c1}{;}
+	\PYG{c+c1}{; Restore the state of the modified registers}
+	\PYG{c+c1}{; Recover the initial value stored on the stack}
+	\PYG{n+nf}{ret}
+\end{Verbatim}

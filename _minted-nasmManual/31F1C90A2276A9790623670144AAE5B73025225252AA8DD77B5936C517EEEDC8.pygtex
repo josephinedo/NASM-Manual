@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{lea} \PYG{n+nb}{rsi}\PYG{p}{,} \PYG{p}{[}\PYG{n+nv}{NAME}\PYG{p}{]}	\PYG{c+c1}{; Memory direct mode from var [name] to rsi}
+\end{Verbatim}

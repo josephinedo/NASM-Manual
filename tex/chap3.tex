@@ -1,0 +1,117 @@
+\chapter{Programming Concepts in Assembly}
+In this chapter we will see how the different control structures of the C language can be translated into assembler language.
+
+\section{Conditional Statement IF}
+In C programming we have:
+\begin{minted}{c}
+if (a > b) {
+	maxA = 1;
+	maxA = 0;
+}
+\end{minted}
+We can translate this code in assembly as follows:
+\begin{minted}{nasm}
+	mov rax, qword [a]    ; Loads 'a' and 'b' into registers rax and rbx
+	mov rbx, qword [b]
+	cmp rax, rbx          ; The comparison is made
+	jg L1                 ; If condition is true jumps to L1
+	jmp L2                ; If condition is false jumps to L2
+L1:
+    mov byte [maxA], 1    ; Only executed if condition was true
+    mov byte [maxB], 0	
+L2:
+\end{minted}
+
+\section{Conditional Statement IF-ELSE}
+In C programming we may have:
+\begin{minted}{c}
+if (a > b) {
+	max = a;
+} else {
+	max = b;
+}
+\end{minted}
+We can translate this code in assembly as follows:
+\begin{minted}{nasm}
+	mov rax, qword [a]    ; loads 'a' and 'b' to registers rax and rbx
+	mov rbx, qword [b]
+	cmp rax, rbx          ; The comparison is made
+	jg L1                 ; If condition is true, jumps to L1
+	mov byte [max], 'b'   ; else (a <= b)
+	jmp L2
+L1:
+	mov byte [max], 'a'   ; if (a > b)
+L2:
+\end{minted}
+
+\section{Conditional Statement WHILE}
+In C programming we have the next factorial example:
+\begin{minted}{c}
+result=1;
+while (num > 1){
+    result = result * num;
+	num--; 
+}
+\end{minted}
+which can be written in assembly as follows:
+\begin{minted}{nasm}
+	mov rax, 1               ; rax its going to be the result
+while:
+	cmp qword [num], 1       ; The comparison is made
+	jle L1
+	imul rax, qword [num]    ; rax=rax*[num]
+	dec qword [num]
+	jmp while
+L1:
+	mov qword [result], rax
+\end{minted}
+
+\section{Conditional Statement DO-WHILE}
+Another example in C...
+\begin{minted}{c}
+result=1;
+do {
+	result = result * num;
+	num--;
+} while (num > 1)
+\end{minted}
+The difference with the WHILE structure is subtle
+\begin{minted}{nasm}
+	mov rax, 1            ; rax its going to be [result]
+	mov rbx, qword [num]  ; Loads num in rbx
+while:
+	imul rax, rbx
+	dec rbx
+	cmp rbx, 1            ; the comparison is made
+	jg while              ; It it is true then jumps tu while
+	mov qword [result], rax
+	mov qword [num], rbx
+\end{minted}
+
+\section{Conditional Statement FOR}
+Finally the FOR structure example in C
+\begin{minted}{c}
+result=1;
+for (i = num; i >1; i--) {
+	result = result * i;
+}
+\end{minted}
+The difference with the WHILE structure is subtle
+\begin{minted}{nasm}
+	mov rax, 1            ; rax its going to be [result]
+	mov rcx, qword [num] ; rcx [i] initialized with [num]
+for:
+	cmp rcx, 1            ; The comparison is made
+	jg cierto             ; If true jumps to L1
+	jmp L2
+L1:
+	imul rax,rcx
+	dec rcx
+	jmp for
+L2:
+	mov qword [result], rax
+	mov qword [i], rcx
+\end{minted}
+
+
+

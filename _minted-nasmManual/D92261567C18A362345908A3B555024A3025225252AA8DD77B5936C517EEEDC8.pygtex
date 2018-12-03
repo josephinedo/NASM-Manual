@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nf}{mov} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{1}            \PYG{c+c1}{; rax its going to be [result]}
+	\PYG{n+nf}{mov} \PYG{n+nb}{rcx}\PYG{p}{,} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{num}\PYG{p}{]} \PYG{c+c1}{; rcx [i] initialized with [num]}
+\PYG{n+nl}{for:}
+	\PYG{n+nf}{cmp} \PYG{n+nb}{rcx}\PYG{p}{,} \PYG{l+m+mi}{1}            \PYG{c+c1}{; The comparison is made}
+	\PYG{n+nf}{jg} \PYG{n+nv}{cierto}             \PYG{c+c1}{; If true jumps to L1}
+	\PYG{n+nf}{jmp} \PYG{n+nv}{L2}
+\PYG{n+nl}{L1:}
+	\PYG{n+nf}{imul} \PYG{n+nb}{rax}\PYG{p}{,}\PYG{n+nb}{rcx}
+	\PYG{n+nf}{dec} \PYG{n+nb}{rcx}
+	\PYG{n+nf}{jmp} \PYG{n+nv}{for}
+\PYG{n+nl}{L2:}
+	\PYG{n+nf}{mov} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{result}\PYG{p}{],} \PYG{n+nb}{rax}
+	\PYG{n+nf}{mov} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{i}\PYG{p}{],} \PYG{n+nb}{rcx}
+\end{Verbatim}

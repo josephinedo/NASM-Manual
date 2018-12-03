@@ -1,0 +1,917 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2014.5.25)  31 MAY 2015 03:09
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&latex preamble.tex\dump
+(./preamble.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \usepackage[utf8]{
+                      inputenc} % UTF-8 -input- enconding, useful to put á ...
+
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage[T1]{
+                    fontenc} % T1 -font- encoding, with this PDF viewer can ...
+
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage[spanish,mexico]{
+                                babel} % My language in the text
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage[pass]{
+                      geometry}
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \usepackage{
+                 comment}
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \usepackage{
+                 enumitem} % Remove indent from itemize and list environment
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage{
+                 amsmath}
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \usepackage{
+                 amsfonts}	% AMS packages
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \usepackage{
+                 amssymb}
+? 
+! Undefined control sequence.
+l.18 \numberwithin
+                  {equation}{chapter} % To put equation number in a differen...
+
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \numberwithin{e
+                    quation}{chapter} % To put equation number in a differen...
+
+? 
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \usepackage[alsoload=synchem]{
+                                   siunitx} % For units and degree symbol wi...
+
+? 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--26
+[]
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \usepackage[nottoc]{
+                         tocbibind} 		% Put figures, tables, bibliography an...
+
+? 
+
+! LaTeX Error: \spanishcontentsname undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \renewcommand\spanishcontentsname
+                                      {Contenido} 	% Redefinition of TOC
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \usepackage[usenames,dvipsnames,table]{
+                                            xcolor} 	% Use of color in diffe...
+
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \usepackage{
+                 graphicx} 	% eps figures using PDFLatex
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \usepackage{
+                 wrapfig}
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \usepackage{
+                 subcaption} % To multiple figures
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \usepackage{
+                 pdflscape}
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 \usepackage{
+                 rotating}
+? 
+! Undefined control sequence.
+l.44 \graphicspath
+                  {{fig/}}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \graphicspath{{f
+                     ig/}}
+? 
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no / in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 44--45
+[] 
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \usepackage{
+                 tabularx} 		% To rezise the table to textwith
+? 
+! Undefined control sequence.
+l.49 \newcolumntype
+                   {C}{>{\centering\arraybackslash}X}	 % Definition needed t...
+
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \newcolumntype{C
+                     }{>{\centering\arraybackslash}X}	 % Definition needed t...
+
+? 
+Missing character: There is no C in font nullfont!
+Missing character: There is no > in font nullfont!
+! Undefined control sequence.
+l.49 \newcolumntype{C}{>{\centering\arraybackslash
+                                                  }X}	 % Definition needed t...
+
+? 
+Missing character: There is no X in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 49--50
+[] 
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \usepackage{
+                 caption} % Put beautiful captions on tables and figures
+? 
+! Undefined control sequence.
+l.54 \captionsetup
+                  {font={small},labelfont=bf, labelsep=endash,format=plain,i...
+
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \captionsetup{f
+                    ont={small},labelfont=bf, labelsep=endash,format=plain,i...
+
+? 
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--55
+[]
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \usepackage{
+                 fix-cm} % To put arbirary font sizes, used on chapter style
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 \usepackage{
+                 titlesec} % To change the style of chapters, sections, subs...
+
+? 
+! Undefined control sequence.
+l.61 \titleformat
+                 {\chapter}[display]
+? 
+! Undefined control sequence.
+l.61 \titleformat{\chapter
+                          }[display]
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \titleformat{\chapter}[
+                            display]
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.62 	{\bfseries\huge
+                     \scshape}
+? 
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 62.
+
+! Undefined control sequence.
+l.63 	{\color
+             {BrickRed}\fontsize{60}{80}\selectfont\thechapter}
+? 
+Missing character: There is no B in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <60> not available
+(Font)              size <24.88> substituted on input line 63.
+
+! Undefined control sequence.
+l.63 ...ed}\fontsize{60}{80}\selectfont\thechapter
+                                                  }
+? 
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.65 \titlespacing
+                  {\chapter}{4pc}{*0}{*10}[0pc]
+? 
+! Undefined control sequence.
+l.65 \titlespacing{\chapter
+                           }{4pc}{*0}{*10}[0pc]
+? 
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 61--66
+[]
+ []
+
+! Undefined control sequence.
+l.67 \titleformat
+                 {\section}
+? 
+! Undefined control sequence.
+l.67 \titleformat{\section
+                          }
+? 
+! Undefined control sequence.
+l.68 	{\bfseries\large
+                      \scshape}
+? 
+! Undefined control sequence.
+l.69   	{\color
+               {BrickRed}\thesection}{0.3 em}{}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69   	{\color{B
+                 rickRed}\thesection}{0.3 em}{}
+? 
+Missing character: There is no B in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+l.69   	{\color{BrickRed}\thesection
+                                    }{0.3 em}{}
+? 
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+! Undefined control sequence.
+l.70 \titlespacing
+                  {\section}{-2pc}{*4}{*1}[0pc]
+? 
+! Undefined control sequence.
+l.70 \titlespacing{\section
+                           }{-2pc}{*4}{*1}[0pc]
+? 
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 69--71
+[]
+ []
+
+! Undefined control sequence.
+l.72 \titleformat
+                 {\subsection}
+? 
+! Undefined control sequence.
+l.72 \titleformat{\subsection
+                             }
+? 
+! Undefined control sequence.
+l.73 	{\bfseries\large
+                      \scshape}
+? 
+! Undefined control sequence.
+l.74   	{\thesubsection
+                       }{0.3 em}{}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74   	{\thesubsection}{0
+                          .3 em}{}
+? 
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+! Undefined control sequence.
+l.75 \titlespacing
+                  {\subsection}{-2pc}{*4}{*1}[0pc]
+? 
+! Undefined control sequence.
+l.75 \titlespacing{\subsection
+                              }{-2pc}{*4}{*1}[0pc]
+? 
+Missing character: There is no - in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 74--76
+[]
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \usepackage{
+                 fancyhdr} % Used to change the style of the headers and foo...
+
+? 
+! Undefined control sequence.
+<argument> \undefinedpagestyle 
+                               
+l.81 \pagestyle{fancy}
+                      
+? 
+
+! LaTeX Error: \chaptermark undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \renewcommand{\chaptermark}
+                                [1]{ \markboth{\MakeUppercase{#1}}{} }
+? 
+
+! LaTeX Error: \headrulewidth undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \renewcommand{\headrulewidth}
+                                  {0pt} % To remove the line in the header
+? 
+! Undefined control sequence.
+l.87 \lhead
+           [{\Large\textbf{\thepage}}\hspace{1cm}\leftmark]{}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 \lhead[
+            {\Large\textbf{\thepage}}\hspace{1cm}\leftmark]{}
+? 
+Missing character: There is no [ in font nullfont!
+! Undefined control sequence.
+l.87 \lhead[{\Large
+                   \textbf{\thepage}}\hspace{1cm}\leftmark]{}
+? 
+! Undefined control sequence.
+<recently read> \thepage 
+                         
+l.87 \lhead[{\Large\textbf{\thepage}
+                                    }\hspace{1cm}\leftmark]{}
+? 
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.88 \rhead
+           []{\rightmark\hspace{1cm}{\Large\textbf{\thepage}}}
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.88 \rhead[]{\rightmark\hspace{1cm}{\Large
+                                           \textbf{\thepage}}}
+? 
+! Undefined control sequence.
+<recently read> \thepage 
+                         
+l.88 ...htmark\hspace{1cm}{\Large\textbf{\thepage}
+                                                  }}
+? 
+! Undefined control sequence.
+l.89 \fancyfoot
+               [EC,OC]{ } % I put this to erase the page numbers from the bo...
+
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.90 \fancyheadoffset
+                     {2 cm}  % To make the header larger
+? 
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 87--91
+[]
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \usepackage{
+                  verbatim} % This is to put wherever it is in the TEX sourc...
+
+? 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 \usepackage{
+                  datetime} % This is to change \today format
+? 
+! Undefined control sequence.
+l.111 \newdateformat
+                    {mydate}{\monthname[\THEMONTH], \THEYEAR}
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 \newdateformat{m
+                      ydate}{\monthname[\THEMONTH], \THEYEAR}
+? 
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.111 \newdateformat{mydate}{\monthname
+                                       [\THEMONTH], \THEYEAR}
+? 
+Missing character: There is no [ in font nullfont!
+! Undefined control sequence.
+l.111 \newdateformat{mydate}{\monthname[\THEMONTH
+                                                 ], \THEYEAR}
+? 
+Missing character: There is no ] in font nullfont!
+Missing character: There is no , in font nullfont!
+! Undefined control sequence.
+l.111 ...t{mydate}{\monthname[\THEMONTH], \THEYEAR
+                                                  }
+? 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 111--112
+[]
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 \usepackage{
+                  makeidx} % To make the index
+? 
+\@indexfile=\write3
+\openout3 = `main.idx'.
+
+Writing index file main.idx
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 \usepackage[hidelinks]{
+                             hyperref} % To make some links in the PDF, this...
+
+? 
+)
+Beginning to dump on file main.fmt
+ (preloaded format=main 2015.5.31)
+6911 strings of total length 114890
+52581 memory locations dumped; current usage is 663&46955
+3587 multiletter control sequences
+\font\nullfont=nullfont
+\font\OMX/cmex/m/n/10=cmex10
+\font\tenln=line10
+\font\tenlnw=linew10
+\font\tencirc=lcircle10
+\font\tencircw=lcirclew10
+\font\OT1/cmr/m/n/5=cmr5
+\font\OT1/cmr/m/n/7=cmr7
+\font\OT1/cmr/m/n/10=cmr10
+\font\OML/cmm/m/it/5=cmmi5
+\font\OML/cmm/m/it/7=cmmi7
+\font\OML/cmm/m/it/10=cmmi10
+\font\OMS/cmsy/m/n/5=cmsy5
+\font\OMS/cmsy/m/n/7=cmsy7
+\font\OMS/cmsy/m/n/10=cmsy10
+\font\OT1/cmr/bx/sc/10=cmbx10
+\font\OT1/cmr/m/n/24.88=cmr17 at 24.88pt
+4240 words of font info for 16 preloaded fonts
+1141 hyphenation exceptions
+Hyphenation trie of length 333814 has 8133 ops out of 35111
+  143 for language 78
+  110 for language 77
+  138 for language 76
+  7 for language 75
+  12 for language 74
+  52 for language 73
+  127 for language 72
+  165 for language 71
+  71 for language 70
+  248 for language 69
+  62 for language 68
+  66 for language 67
+  119 for language 65
+  43 for language 64
+  58 for language 63
+  7 for language 62
+  194 for language 61
+  37 for language 60
+  852 for language 59
+  852 for language 58
+  21 for language 57
+  38 for language 56
+  77 for language 55
+  58 for language 54
+  25 for language 53
+  27 for language 52
+  37 for language 51
+  229 for language 50
+  38 for language 49
+  21 for language 48
+  147 for language 36
+  185 for language 35
+  50 for language 34
+  18 for language 33
+  388 for language 32
+  235 for language 31
+  207 for language 30
+  39 for language 29
+  76 for language 28
+  40 for language 27
+  88 for language 26
+  31 for language 25
+  113 for language 22
+  145 for language 21
+  377 for language 20
+  224 for language 19
+  265 for language 18
+  60 for language 17
+  63 for language 16
+  19 for language 15
+  14 for language 14
+  2 for language 13
+  21 for language 12
+  12 for language 11
+  5 for language 10
+  148 for language 7
+  97 for language 6
+  137 for language 5
+  400 for language 4
+  410 for language 3
+  2 for language 1
+  181 for language 0
+0 words of pdfTeX memory
+0 indirect objects
+No pages of output.

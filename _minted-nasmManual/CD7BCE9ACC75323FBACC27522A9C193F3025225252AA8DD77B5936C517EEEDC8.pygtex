@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZpc{}macro macroName  numberParams}
+	\PYG{c+c1}{; macro body}
+\PYG{c+cp}{\PYGZpc{}endmacro}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	nasm \PYGZhy{}fmacho64 gcd.asm
+	nasm \PYGZhy{}fmacho64 factorial.asm
+\end{Verbatim}

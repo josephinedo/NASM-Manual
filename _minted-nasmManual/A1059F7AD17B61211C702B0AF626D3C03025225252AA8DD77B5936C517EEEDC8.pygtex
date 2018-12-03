@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{push} \PYG{n+nb}{rbp}		\PYG{c+c1}{; loads base pointer to the stack}
+\PYG{n+nf}{pop} \PYG{n+nb}{rbp}		\PYG{c+c1}{; extract base pointer from the stack}
+\end{Verbatim}

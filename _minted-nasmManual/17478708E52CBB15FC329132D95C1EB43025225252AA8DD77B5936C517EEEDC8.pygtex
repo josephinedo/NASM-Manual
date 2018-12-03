@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n+nf}{mov} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{1}               \PYG{c+c1}{; rax its going to be the result}
+\PYG{n+nl}{while:}
+	\PYG{n+nf}{cmp} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{num}\PYG{p}{],} \PYG{l+m+mi}{1}       \PYG{c+c1}{; The comparison is made}
+	\PYG{n+nf}{jle} \PYG{n+nv}{L1}
+	\PYG{n+nf}{imul} \PYG{n+nb}{rax}\PYG{p}{,} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{num}\PYG{p}{]}    \PYG{c+c1}{; rax=rax*[num]}
+	\PYG{n+nf}{dec} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{num}\PYG{p}{]}
+	\PYG{n+nf}{jmp} \PYG{n+nv}{while}
+\PYG{n+nl}{L1:}
+	\PYG{n+nf}{mov} \PYG{k+kt}{qword} \PYG{p}{[}\PYG{n+nv}{result}\PYG{p}{],} \PYG{n+nb}{rax}
+\end{Verbatim}

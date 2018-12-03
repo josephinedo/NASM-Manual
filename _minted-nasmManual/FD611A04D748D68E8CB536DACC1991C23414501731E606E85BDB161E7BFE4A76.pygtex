@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{; Factorial. It takes an integer input and returns its factorial}
+\PYG{c+c1}{; To assemble:}
+\PYG{c+c1}{;       nasm \PYGZhy{}fmacho64 factorial.asm}
+\PYG{c+c1}{; \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+        \PYG{k}{global}  \PYG{n+nv}{\PYGZus{}factorial}
+
+        \PYG{k}{SECTION} \PYG{n+nv}{.text}
+\PYG{n+nl}{\PYGZus{}factorial:}
+        \PYG{n+nf}{cmp}     \PYG{n+nb}{rdi}\PYG{p}{,} \PYG{l+m+mi}{1}          \PYG{c+c1}{; n \PYGZlt{}= 1?}
+        \PYG{n+nf}{jnbe}    \PYG{n+nv}{L1}              \PYG{c+c1}{; If not, make a recursive call}
+        \PYG{n+nf}{mov}     \PYG{n+nb}{rax}\PYG{p}{,} \PYG{l+m+mi}{1}          \PYG{c+c1}{; Other way return 1}
+        \PYG{n+nf}{ret}
+\PYG{n+nl}{L1:}
+        \PYG{n+nf}{push}    \PYG{n+nb}{rdi}             \PYG{c+c1}{; save n on stack}
+        \PYG{n+nf}{dec}     \PYG{n+nb}{rdi}             \PYG{c+c1}{; n\PYGZhy{}1}
+        \PYG{n+nf}{call}    \PYG{n+nv}{\PYGZus{}factorial}      \PYG{c+c1}{; factorial(n\PYGZhy{}1), rax = result}
+        \PYG{n+nf}{pop}     \PYG{n+nb}{rdi}             \PYG{c+c1}{; retrieve n}
+        \PYG{n+nf}{imul}    \PYG{n+nb}{rax}\PYG{p}{,} \PYG{n+nb}{rdi}        \PYG{c+c1}{; n * factorial(n\PYGZhy{}1), save in rax}
+        \PYG{n+nf}{ret}
+\end{Verbatim}

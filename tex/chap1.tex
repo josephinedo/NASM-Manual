@@ -1,0 +1,66 @@
+\chapter[Introduction]{Introduction}
+The Netwide Assembler, NASM, is an 80x86 and x86-64 assembler designed for portability and modularity. It supports a range of object file formats, including Linux and BSD a.out, ELF, COFF, Mach-O, 16-bit and 32-bit OBJ (OMF) format, Win32 and Win64. It will also output plain binary files, Intel hex and Motorola S-Record formats. Its syntax is designed to be simple and easy to understand, similar to the syntax in the Intel Software Developer Manual with minimal complexity. It supports all currently known x86 architectural extensions, and has strong support for macros \cite{website:NASM}.
+
+\section{History}
+NASM was originally written by Simon Tatham with assistance from Julian Hall. As of 2018, it is maintained by a small team led by H. Peter Anvin. It is open-source software released under the terms of a simplified (2-clause) BSD license.
+
+NASM was among the first of the Open-Source, freely available, assemblers available for the x86. The project was started in the 1996 time
+frame as a way of creating a portable x86 assembler that uses a "somewhat Intel Syntax" (as opposed to GNU's Gas, the only other truly portable x86 assembler available at the time). Originally, NASM started out as a copyrighted program similar to FASM. Recently, however, NASM's original authors released NASM to the open software community under the LGPL license.
+
+\section{Installation}
+\noindent The best way to install NASM on mac is trough homebrew \cite{website:Homebrew}. For the installation of NASM under MS-DOS (Windows) or Unix consult the NASM Manual from the official website \cite{website:NASM}. 
+
+\begin{itemize}
+\item Install \textbf{Homebrew} first: open a Terminal prompt and paste (just remove the backslash "\textbackslash" before the dollar sign)
+	\begin{minted}[breaklines, breakanywhere]{bash}
+/usr/bin/ruby -e "\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	\end{minted}
+
+\item Install \textbf{NASM}
+	\begin{minted}{bash}
+brew install nasm
+	\end{minted}
+\end{itemize}
+
+\section{Running NASM}
+\noindent In order to understand the nature of the running of NASM and the options available, we will present your first assembly program called helloFriend.s (Source Code \ref{listing:hello}), for the moment it's not necessary to know all the details of the file. To assemble a file, you issue a command of the form:
+\mint{bash}| nasm -f <format> <filename> [-o <output>] |
+\noindent For example, for the file helloFriend.s
+\mint{bash}| nasm -f macho64 helloFriend.s |
+\noindent will assemble helloFriend.s into an \texttt{macho64} object file helloFriend.o. Than to compile and execute the program we type
+\begin{minted}{bash}
+gcc -o hello helloFriend.o
+./hello
+Hello Friend!
+\end{minted}
+
+\begin{listing}[ht]
+\inputminted{nasm}{code/helloFriend.asm}
+\caption{Your first hello assembly program. helloFriend.asm}
+\label{listing:hello}
+\end{listing}
+
+Some of the most important options for running NASM are:
+\begin{itemize}
+\item \textbf{-o Option: Specifying the Output File Name} \\
+NASM will normally choose the name of your output file for you; precisely how it does this is dependent on the object file format. For Unix object file formats (aout, as86, coff, elf32, elf64, elfx32, ieee, macho32 and macho64) it will substitute .o. If the output file already exists, NASM will overwrite it, unless it has the same name as the input file, in which case it will give a warning and use nasm.out as the output file name instead.
+
+For situations in which this behaviour is unacceptable, NASM provides the -o command-line option, which allows you to specify your desired output file name. You invoke -o by following it with the name you wish for the output file, either with or without an intervening space. For example:
+\begin{minted}{bash}
+nasm -f macho64 helloFriend.asm -o hello
+\end{minted}
+will create the output file hello.o
+
+\item \textbf{-f Option: Specifying the Output File Format} \\
+If you do not supply the -f option to NASM, it will choose an output file format for you itself. In the distribution versions of NASM, the default is always bin. Like -o, the intervening space between -f and the output file format is optional; so -f macho64 and -fmacho64 are both valid. A complete list of the available output file formats can be given by issuing the command nasm -hf.
+
+\item \textbf{-l Option: Generating a Listing File} \\
+If you supply the -l option to NASM, followed (with the usual optional space) by a file name, NASM will generate a source-listing file for you, in which addresses and generated code are listed on the left, and the actual source code, with expansions of multi-line macros on the right For example:
+\begin{minted}{bash}
+nasm -fmacho64 helloFriend.asm -l helloFriend.lst
+\end{minted}
+
+\item \textbf{-g Option: Enabling Debug Information} \\
+This option can be used to generate debugging information in the specified format. Using -g without -F results in emitting debug info in the default format, if any, for the selected output format. If no debug information is currently implemented in the selected output format, -g is silently
+ignored
+\end{itemize}
